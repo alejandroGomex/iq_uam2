@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "IQ_UAM_TEST",
+    "slug": "iq-uam-test",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.iquamtest.app"
+    },
+    "android": {
+      "package": "com.iquamtest.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7dfe9c4d-6601-4eb3-8978-40facd0fb7c2"
+      }
+    },
+    "owner": "isabellagl"
+  }
+}
