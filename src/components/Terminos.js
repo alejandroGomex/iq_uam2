@@ -8,11 +8,11 @@ import {
   TextInput,
   Image,
   Button,
-  Alert
+  Alert,
 } from "react-native";
 import { CheckBox } from "../Tools/CheckBox";
 import ColorBar from "../Tools/ColorBar";
-import { Pregunta } from "./Pregunta";
+import { Pregunta1 } from "./Pregunta1";
 import { Instrucciones } from "./Instrucciones";
 import React, { useState, useEffect } from "react";
 
@@ -20,20 +20,20 @@ export const Terminos = ({ modalTerminos, setModalTerminos }) => {
   const [modalInstruccion, setModalInstruccion] = useState(false);
   const [modalPregunta, setModalPregunta] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
+  const [modalPregunta1, setModalPregunta1] = useState(false);
 
- 
   const handleCheckboxChange = () => {
-    setIsChecked(previousState => !previousState);
+    setIsChecked((previousState) => !previousState);
   };
 
   const handleValidation = () => {
     if (isChecked) {
-      Alert.alert('Checkbox marcado');
+      Alert.alert("Checkbox marcado");
     } else {
-      Alert.alert('Checkbox no marcado');
+      Alert.alert("Checkbox no marcado");
     }
   };
-  
+
   return (
     <Modal animationType='slide' visible={modalTerminos}>
       <View>
@@ -60,7 +60,9 @@ export const Terminos = ({ modalTerminos, setModalTerminos }) => {
           {"\n"} ¡nuestra página es el lugar perfecto para hacerlo!
         </Text>
       </View>
-      <CheckBox value={isChecked} onValueChange={handleCheckboxChange}></CheckBox>
+      <CheckBox
+        value={isChecked}
+        onValueChange={handleCheckboxChange}></CheckBox>
       <View style={styles.buttons}>
         <Pressable
           style={[styles.btn, styles.btnAgregar]}
@@ -77,11 +79,11 @@ export const Terminos = ({ modalTerminos, setModalTerminos }) => {
           style={[styles.btn2, styles.btnAgregar]}
           onPress={() => {
             //handleValidation()
-            setModalPregunta(true);
+            setModalPregunta1(true);
           }}>
-          <Pregunta
-            modalPregunta={modalPregunta}
-            setModalPregunta={setModalPregunta}></Pregunta>
+          <Pregunta1
+            modalPregunta1={modalPregunta1}
+            setModalPregunta1={setModalPregunta1}></Pregunta1>
 
           <Text style={styles.subtitle}>Continuar</Text>
         </Pressable>

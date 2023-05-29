@@ -38,9 +38,9 @@ export const Pregunta6 = ({ modalPregunta6, setModalPregunta6 }) => {
   const handleOption = (option)=>{
     if(option === null){
       alert('Seleccione una opción')
-      setModalPregunta6(false)
+      setModalPregunta7(false)
     }else{
-      setModalPregunta6(true)
+      setModalPregunta7(true)
     }
 }
 
@@ -57,7 +57,7 @@ export const Pregunta6 = ({ modalPregunta6, setModalPregunta6 }) => {
       <View>
         <Image
           style={styles.image}
-          source={require("../../assets/questions/question7/p7.png")}
+          source={require("../../assets/questions/question6/p6.png")}
         />
       </View>
       <View style={styles.containerIm}>
@@ -68,30 +68,30 @@ export const Pregunta6 = ({ modalPregunta6, setModalPregunta6 }) => {
         }>
           <Image
             style={styles.subimage}
-            source={require("../../assets/questions/question7/1.png")}
+            source={require("../../assets/questions/question6/1.png")}
 
           />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => {
           handleOptionPress('Opción 2')
-          handleValue('3');
+          handleValue('2');
 
         }}>
           <Image
             style={styles.subimage}
-            source={require("../../assets/questions/question7/2.png")}
+            source={require("../../assets/questions/question6/2.png")}
 
           />
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => {
           handleOptionPress('Opción 3')
-          handleValue('4');
+          handleValue('3');
 
         }}>
           <Image
             style={styles.subimage}
-            source={require("../../assets/questions/question7/3.png")}
+            source={require("../../assets/questions/question6/3.png")}
 
           />
         </TouchableOpacity>
@@ -100,24 +100,24 @@ export const Pregunta6 = ({ modalPregunta6, setModalPregunta6 }) => {
       <View style={styles.containerIm}>
         <TouchableOpacity onPress={() => {
           handleOptionPress('Opción 4')
-          handleValue('5');
+          handleValue('4');
 
         }}>
           <Image
             style={styles.subimagef2}
-            source={require("../../assets/questions/question7/4.png")}
+            source={require("../../assets/questions/question6/4.png")}
 
           />
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => {
           handleOptionPress('Opción 5')
-          handleValue('6');
+          handleValue('5');
 
         }}>
           <Image
             style={styles.subimagef2}
-            source={require("../../assets/questions/question7/5.png")}
+            source={require("../../assets/questions/question6/5.png")}
 
 
           />
@@ -125,12 +125,12 @@ export const Pregunta6 = ({ modalPregunta6, setModalPregunta6 }) => {
 
         <TouchableOpacity onPress={() => {
           handleOptionPress('Opción 6')
-          handleValue('8');
+          handleValue('6');
 
         }}>
           <Image
             style={styles.subimagef2}
-            source={require("../../assets/questions/question7/6.png")}
+            source={require("../../assets/questions/question6/6.png")}
           />
         </TouchableOpacity>
       </View>

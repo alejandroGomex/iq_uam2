@@ -9,15 +9,15 @@ import {
   Image,
   Button,
   TouchableOpacity,
-  Alert
+  Alert,
 } from "react-native";
 
 import ColorBar from "../Tools/ColorBar";
 import Timer from "../Tools/Timer";
 import { TiposInteligencia } from "./TiposInteligencia";
 import React, { useState, useEffect } from "react";
-import {Pregunta6} from "./Pregunta6";
-export const Pregunta5 = ({ modalPregunta5, setModalPregunta5}) => {
+import { Pregunta6 } from "./Pregunta6";
+export const Pregunta5 = ({ modalPregunta5, setModalPregunta5 }) => {
   const [modalInteligencia, setModalInteligencia] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
   const [modalPregunta6, setModalPregunta6] = useState(false);
@@ -34,17 +34,14 @@ export const Pregunta5 = ({ modalPregunta5, setModalPregunta5}) => {
     Alert.alert(`Valor opcion seleccionada: ${value}`);
   };
 
-
-  const handleOption = (option)=>{
-    if(option === null){
-      alert('Seleccione una opción')
-      setModalPregunta6(false)
-    }else{
-      setModalPregunta6(true)
+  const handleOption = (option) => {
+    if (option === null) {
+      alert("Seleccione una opción");
+      setModalPregunta6(false);
+    } else {
+      setModalPregunta6(true);
     }
-}
-
-
+  };
 
   return (
     <Modal animationType='slide' visible={modalPregunta5}>
@@ -52,7 +49,7 @@ export const Pregunta5 = ({ modalPregunta5, setModalPregunta5}) => {
         <ColorBar></ColorBar>
       </View>
       <View>
-      <Timer duration={30}  />
+        <Timer duration={30} />
       </View>
       <View>
         <Image
@@ -61,76 +58,69 @@ export const Pregunta5 = ({ modalPregunta5, setModalPregunta5}) => {
         />
       </View>
       <View style={styles.containerIm}>
-        <TouchableOpacity onPress={() => {
-          handleOptionPress('Opción 1');
-          handleValue('1');
-        }
-        }>
+        <TouchableOpacity
+          onPress={() => {
+            handleOptionPress("Opción 1");
+            handleValue("1");
+          }}>
           <Image
             style={styles.subimage}
             source={require("../../assets/questions/question5/1.png")}
-
           />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => {
-          handleOptionPress('Opción 2')
-          handleValue('3');
-
-        }}>
+        <TouchableOpacity
+          onPress={() => {
+            handleOptionPress("Opción 2");
+            handleValue("2");
+          }}>
           <Image
             style={styles.subimage}
-            source={require("../../assets/questions/question6/2.png")}
-
+            source={require("../../assets/questions/question5/2.png")}
           />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => {
-          handleOptionPress('Opción 3')
-          handleValue('4');
-
-        }}>
+        <TouchableOpacity
+          onPress={() => {
+            handleOptionPress("Opción 3");
+            handleValue("3");
+          }}>
           <Image
             style={styles.subimage}
-            source={require("../../assets/questions/question6/3.png")}
-
+            source={require("../../assets/questions/question5/3.png")}
           />
         </TouchableOpacity>
-
       </View>
       <View style={styles.containerIm}>
-        <TouchableOpacity onPress={() => {
-          handleOptionPress('Opción 4')
-          handleValue('5');
-
-        }}>
+        <TouchableOpacity
+          onPress={() => {
+            handleOptionPress("Opción 4");
+            handleValue("4");
+          }}>
           <Image
             style={styles.subimagef2}
-            source={require("../../assets/questions/question6/4.png")}
-
+            source={require("../../assets/questions/question5/4.png")}
           />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => {
-          handleOptionPress('Opción 5')
-          handleValue('6');
-
-        }}>
+        <TouchableOpacity
+          onPress={() => {
+            handleOptionPress("Opción 5");
+            handleValue("5");
+          }}>
           <Image
             style={styles.subimagef2}
-            source={require("../../assets/questions/question6/5.png")}
-
-
+            source={require("../../assets/questions/question5/5.png")}
           />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => {
-          handleOptionPress('Opción 6')
-          handleValue('8');
-
-        }}>
+        <TouchableOpacity
+          onPress={() => {
+            handleOptionPress("Opción 6");
+            handleValue("6");
+          }}>
           <Image
             style={styles.subimagef2}
-            source={require("../../assets/questions/question6/6.png")}
+            source={require("../../assets/questions/question5/6.png")}
           />
         </TouchableOpacity>
       </View>
@@ -139,8 +129,7 @@ export const Pregunta5 = ({ modalPregunta5, setModalPregunta5}) => {
         <Pressable
           style={[styles.btn, styles.btnAgregar]}
           onPress={() => {
-            handleOption(selectedOption)
-
+            handleOption(selectedOption);
           }}>
           <Pregunta6
             modalPregunta6={modalPregunta6}

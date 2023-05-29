@@ -73,7 +73,7 @@ export const Pregunta3 = ({ modalPregunta3, setModalPregunta3 }) => {
         </TouchableOpacity>
         <TouchableOpacity onPress={() => {
           handleOptionPress('Opción 2')
-          handleValue('3');
+          handleValue('2');
 
         }}>
           <Image
@@ -85,7 +85,7 @@ export const Pregunta3 = ({ modalPregunta3, setModalPregunta3 }) => {
 
         <TouchableOpacity onPress={() => {
           handleOptionPress('Opción 3')
-          handleValue('4');
+          handleValue('3');
 
         }}>
           <Image
@@ -99,7 +99,7 @@ export const Pregunta3 = ({ modalPregunta3, setModalPregunta3 }) => {
       <View style={styles.containerIm}>
         <TouchableOpacity onPress={() => {
           handleOptionPress('Opción 4')
-          handleValue('5');
+          handleValue('4');
 
         }}>
           <Image
@@ -111,7 +111,7 @@ export const Pregunta3 = ({ modalPregunta3, setModalPregunta3 }) => {
 
         <TouchableOpacity onPress={() => {
           handleOptionPress('Opción 5')
-          handleValue('6');
+          handleValue('5');
 
         }}>
           <Image
@@ -124,7 +124,7 @@ export const Pregunta3 = ({ modalPregunta3, setModalPregunta3 }) => {
 
         <TouchableOpacity onPress={() => {
           handleOptionPress('Opción 6')
-          handleValue('8');
+          handleValue('6');
 
         }}>
           <Image

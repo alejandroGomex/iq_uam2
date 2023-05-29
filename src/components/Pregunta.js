@@ -31,7 +31,7 @@ export const Pregunta = ({ modalPregunta, setModalPregunta }) => {
           />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => handleOptionPress("Opci贸n 2")}>
+        <TouchableOpacity onPress={() => handleOptionPress("Opcion 2")}>
           <Image
             style={styles.subimage}
             source={require("../../assets/questions/question1/r2.png")}

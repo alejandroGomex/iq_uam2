@@ -1,26 +1,28 @@
 import React from "react";
-import { Modal, StyleSheet, Text, View, Pressable,Image } from "react-native";
+import { Modal, StyleSheet, Text, View, Pressable, Image } from "react-native";
 import ColorBar from "../Tools/ColorBar";
 import { TiposInteligencia } from "./TiposInteligencia";
 
 export const Resultado = ({ modalResultado, setModalResultado }) => {
   return (
-    <Modal animationType="slide" visible={modalResultado}>
+    <Modal animationType='slide' visible={modalResultado}>
       <View>
         <ColorBar />
-        <Text style={styles.title}>
-         Tu resultado es : 110!!
-        </Text>
+        <Text style={styles.title}>Tu resultado es : 110!!</Text>
       </View>
       <View>
-
-      <Image
-            style={styles.image}
-            source={require("../../assets/resultado.png")}
-          />
+        <Image
+          style={styles.imagep}
+          source={require("../../assets/progress.png")}
+        />
       </View>
-      <View style={styles.buttons}>
+      <View>
+        <Image
+          style={styles.image}
+          source={require("../../assets/resultado.png")}
+        />
       </View>
+      <View style={styles.buttons}></View>
     </Modal>
   );
 };
@@ -71,14 +73,20 @@ const styles = StyleSheet.create({
     backgroundColor: "#0069A3",
   },
   image: {
-    width: 400,
-    height: 450,
-    marginLeft: 10,
+    width: 300,
+    height: 300,
+    marginLeft: 50,
+    marginTop: 60,
+  },
+  imagep: {
+    width: 100,
+    height: 100,
+    marginLeft: 150,
+    marginTop: 50,
   },
   subimage: {
     width: 150,
     height: 40,
-    marginLeft: 130,
   },
   subtitle: {
     textAlign: "center",

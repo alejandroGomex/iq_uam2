@@ -9,14 +9,15 @@ import {
   Image,
   Button,
   TouchableOpacity,
-  Alert
+  Alert,
 } from "react-native";
 
 import ColorBar from "../Tools/ColorBar";
 import Timer from "../Tools/Timer";
 import { TiposInteligencia } from "./TiposInteligencia";
 import React, { useState, useEffect } from "react";
-import {Resultado} from "./Resultado";
+import { Resultado } from "./Resultado";
+import { Pregunta } from "./Pregunta8";
 export const Pregunta8 = ({ modalPregunta8, setModalPregunta8 }) => {
   const [modalInteligencia, setModalInteligencia] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
@@ -33,25 +34,22 @@ export const Pregunta8 = ({ modalPregunta8, setModalPregunta8 }) => {
     Alert.alert(`Valor opcion seleccionada: ${value}`);
   };
 
-
-  const handleOption = (option)=>{
-    if(option === null){
-      alert('Seleccione una opción')
-      setModalPregunta2(false)
-    }else{
-      setModalPregunta2(true)
+  const handleOption = (option) => {
+    if (option === null) {
+      alert("Seleccione una opción");
+      setModalResultado(false);
+    } else {
+      setModalResultado(true);
     }
-}
-
-
+  };
 
   return (
-    <Modal animationType='slide' visible={modalPregunta2}>
+    <Modal animationType='slide' visible={modalPregunta8}>
       <View>
         <ColorBar></ColorBar>
       </View>
       <View>
-      <Timer duration={30}  />
+        <Timer duration={30} />
       </View>
       <View>
         <Image
@@ -60,73 +58,66 @@ export const Pregunta8 = ({ modalPregunta8, setModalPregunta8 }) => {
         />
       </View>
       <View style={styles.containerIm}>
-        <TouchableOpacity onPress={() => {
-          handleOptionPress('Opción 1');
-          handleValue('1');
-        }
-        }>
+        <TouchableOpacity
+          onPress={() => {
+            handleOptionPress("Opción 1");
+            handleValue("1");
+          }}>
           <Image
             style={styles.subimage}
             source={require("../../assets/questions/question9/1.png")}
-
           />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => {
-          handleOptionPress('Opción 2')
-          handleValue('3');
-
-        }}>
+        <TouchableOpacity
+          onPress={() => {
+            handleOptionPress("Opción 2");
+            handleValue("3");
+          }}>
           <Image
             style={styles.subimage}
             source={require("../../assets/questions/question9/2.png")}
-
           />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => {
-          handleOptionPress('Opción 3')
-          handleValue('4');
-
-        }}>
+        <TouchableOpacity
+          onPress={() => {
+            handleOptionPress("Opción 3");
+            handleValue("4");
+          }}>
           <Image
             style={styles.subimage}
             source={require("../../assets/questions/question9/3.png")}
-
           />
         </TouchableOpacity>
-
       </View>
       <View style={styles.containerIm}>
-        <TouchableOpacity onPress={() => {
-          handleOptionPress('Opción 4')
-          handleValue('5');
-
-        }}>
+        <TouchableOpacity
+          onPress={() => {
+            handleOptionPress("Opción 4");
+            handleValue("5");
+          }}>
           <Image
             style={styles.subimagef2}
             source={require("../../assets/questions/question9/4.png")}
-
           />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => {
-          handleOptionPress('Opción 5')
-          handleValue('6');
-
-        }}>
+        <TouchableOpacity
+          onPress={() => {
+            handleOptionPress("Opción 5");
+            handleValue("6");
+          }}>
           <Image
             style={styles.subimagef2}
             source={require("../../assets/questions/question9/5.png")}
-
-
           />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => {
-          handleOptionPress('Opción 6')
-          handleValue('8');
-
-        }}>
+        <TouchableOpacity
+          onPress={() => {
+            handleOptionPress("Opción 6");
+            handleValue("8");
+          }}>
           <Image
             style={styles.subimagef2}
             source={require("../../assets/questions/question9/6.png")}
@@ -138,20 +129,7 @@ export const Pregunta8 = ({ modalPregunta8, setModalPregunta8 }) => {
         <Pressable
           style={[styles.btn, styles.btnAgregar]}
           onPress={() => {
-            setModalInteligencia(true);
-
-          }}>
-          <TiposInteligencia
-            modalInteligencia={modalInteligencia}
-            setModalInteligencia={setModalInteligencia}></TiposInteligencia>
-
-          <Text style={styles.subtitle}>Continuar</Text>
-        </Pressable>
-        <Pressable
-          style={[styles.btn, styles.btnAgregar]}
-          onPress={() => {
-            setModalInteligencia(true);
-
+            handleOption(selectedOption);
           }}>
           <Resultado
             modalResultado={modalResultado}
