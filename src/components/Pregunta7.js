@@ -16,11 +16,12 @@ import ColorBar from "../Tools/ColorBar";
 import Timer from "../Tools/Timer";
 import { TiposInteligencia } from "./TiposInteligencia";
 import React, { useState, useEffect } from "react";
-import {Pregunta3} from "./Pregunta3";
-export const Pregunta2 = ({ modalPregunta2, setModalPregunta2 }) => {
+import {Pregunta8} from "./Pregunta8";  
+export const Pregunta7 = ({ modalPregunta7, setModalPregunta7}) => {
   const [modalInteligencia, setModalInteligencia] = useState(false);
-  const [modalPregunta3, setModalPregunta3] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
+  const [modalPregunta8, setModalPregunta8] = useState(false);
+
   const [value, setValue] = useState(null);
 
   const handleOptionPress = (option) => {
@@ -37,16 +38,16 @@ export const Pregunta2 = ({ modalPregunta2, setModalPregunta2 }) => {
   const handleOption = (option)=>{
     if(option === null){
       alert('Seleccione una opción')
-      setModalPregunta3(false)
+      setModalPregunta8(false)
     }else{
-      setModalPregunta3(true)
+      setModalPregunta8(true)
     }
 }
 
 
 
   return (
-    <Modal animationType='slide' visible={modalPregunta2}>
+    <Modal animationType='slide' visible={modalPregunta7}>
       <View>
         <ColorBar></ColorBar>
       </View>
@@ -56,7 +57,7 @@ export const Pregunta2 = ({ modalPregunta2, setModalPregunta2 }) => {
       <View>
         <Image
           style={styles.image}
-          source={require("../../assets/questions/question2/p2.jpeg")}
+          source={require("../../assets/questions/question8/p8.png")}
         />
       </View>
       <View style={styles.containerIm}>
@@ -67,7 +68,7 @@ export const Pregunta2 = ({ modalPregunta2, setModalPregunta2 }) => {
         }>
           <Image
             style={styles.subimage}
-            source={require("../../assets/questions/question2/p1.png")}
+            source={require("../../assets/questions/question8/1.png")}
 
           />
         </TouchableOpacity>
@@ -78,7 +79,7 @@ export const Pregunta2 = ({ modalPregunta2, setModalPregunta2 }) => {
         }}>
           <Image
             style={styles.subimage}
-            source={require("../../assets/questions/question2/p8.png")}
+            source={require("../../assets/questions/question8/2.png")}
 
           />
         </TouchableOpacity>
@@ -90,7 +91,7 @@ export const Pregunta2 = ({ modalPregunta2, setModalPregunta2 }) => {
         }}>
           <Image
             style={styles.subimage}
-            source={require("../../assets/questions/question2/p3.png")}
+            source={require("../../assets/questions/question8/3.png")}
 
           />
         </TouchableOpacity>
@@ -104,7 +105,7 @@ export const Pregunta2 = ({ modalPregunta2, setModalPregunta2 }) => {
         }}>
           <Image
             style={styles.subimagef2}
-            source={require("../../assets/questions/question2/p4.png")}
+            source={require("../../assets/questions/question8/4.png")}
 
           />
         </TouchableOpacity>
@@ -116,7 +117,7 @@ export const Pregunta2 = ({ modalPregunta2, setModalPregunta2 }) => {
         }}>
           <Image
             style={styles.subimagef2}
-            source={require("../../assets/questions/question2/p5.png")}
+            source={require("../../assets/questions/question8/5.png")}
 
 
           />
@@ -129,7 +130,7 @@ export const Pregunta2 = ({ modalPregunta2, setModalPregunta2 }) => {
         }}>
           <Image
             style={styles.subimagef2}
-            source={require("../../assets/questions/question2/p6.png")}
+            source={require("../../assets/questions/question8/6.png")}
           />
         </TouchableOpacity>
       </View>
@@ -139,10 +140,11 @@ export const Pregunta2 = ({ modalPregunta2, setModalPregunta2 }) => {
           style={[styles.btn, styles.btnAgregar]}
           onPress={() => {
             handleOption(selectedOption)
+
           }}>
-          <Pregunta3
-            modalPregunta3={modalPregunta3}
-            setModalPregunta3={setModalPregunta3}></Pregunta3>
+          <Pregunta8
+            modalPregunta8={modalPregunta8}
+            setModalPregunta8={setModalPregunta8}></Pregunta8>
 
           <Text style={styles.subtitle}>Continuar</Text>
         </Pressable>

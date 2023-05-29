@@ -16,10 +16,11 @@ import {
 import { RuedaInteligencia } from "./src/components/RuedaInteligencia";
 //import { TiposInteligencia } from "./src/components/TiposInteligencia";
 import { Login } from "./src/components/Login";
-
+import { InteligenciasS } from "./src/components/InteligenciasS"; 
 export default function App() {
   const [userName, setUserName] = useState("");
   const [userPassword, setUserPassword] = useState("");
+  const [modalInteligenciasS,setModalInteligenciasS] = useState(false);
   const [modalRegistro, setModalRegistro] = useState(false);
   const [modalLogin, setModalLogin] = useState(false);
   const [modalRueda, setModalRueda] = useState(false);
@@ -83,14 +84,30 @@ export default function App() {
         }}>
         <Login modalLogin={modalLogin} setModalLogin={setModalLogin}></Login>
 
-        <Text style={styles.subtitle}>INICIAR TEST</Text>
+        <Text style={styles.subtitle}>INICIAR TEST IQ</Text>
       </Pressable>
+
+      <Pressable
+        style={styles.btn}
+        onPress={() => {
+          setModalInteligenciasS(true);
+        }}>
+        <InteligenciasS modalInteligenciasS={modalInteligenciasS} setModalInteligenciasS={setModalInteligenciasS}></InteligenciasS>
+
+        <Text style={styles.subtitle}>INICIAR TEST Inteligencias</Text>
+      </Pressable>
+
+
+
+
 
       <Pressable
         style={[styles.btn, styles.btnAgregar]}
         onPress={() => {
           setModalRueda(true);
         }}>
+
+          
    {/*      <RuedaInteligencia
           modalRueda={modalRueda}
           setModalRueda={setModalRueda}></RuedaInteligencia>

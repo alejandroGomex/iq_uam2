@@ -16,11 +16,11 @@ import ColorBar from "../Tools/ColorBar";
 import Timer from "../Tools/Timer";
 import { TiposInteligencia } from "./TiposInteligencia";
 import React, { useState, useEffect } from "react";
-import {Pregunta3} from "./Pregunta3";
-export const Pregunta2 = ({ modalPregunta2, setModalPregunta2 }) => {
+import {Resultado} from "./Resultado";
+export const Pregunta8 = ({ modalPregunta8, setModalPregunta8 }) => {
   const [modalInteligencia, setModalInteligencia] = useState(false);
-  const [modalPregunta3, setModalPregunta3] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
+  const [modalResultado, setModalResultado] = useState(false);
   const [value, setValue] = useState(null);
 
   const handleOptionPress = (option) => {
@@ -37,9 +37,9 @@ export const Pregunta2 = ({ modalPregunta2, setModalPregunta2 }) => {
   const handleOption = (option)=>{
     if(option === null){
       alert('Seleccione una opción')
-      setModalPregunta3(false)
+      setModalPregunta2(false)
     }else{
-      setModalPregunta3(true)
+      setModalPregunta2(true)
     }
 }
 
@@ -56,7 +56,7 @@ export const Pregunta2 = ({ modalPregunta2, setModalPregunta2 }) => {
       <View>
         <Image
           style={styles.image}
-          source={require("../../assets/questions/question2/p2.jpeg")}
+          source={require("../../assets/questions/question9/p9.png")}
         />
       </View>
       <View style={styles.containerIm}>
@@ -67,7 +67,7 @@ export const Pregunta2 = ({ modalPregunta2, setModalPregunta2 }) => {
         }>
           <Image
             style={styles.subimage}
-            source={require("../../assets/questions/question2/p1.png")}
+            source={require("../../assets/questions/question9/1.png")}
 
           />
         </TouchableOpacity>
@@ -78,7 +78,7 @@ export const Pregunta2 = ({ modalPregunta2, setModalPregunta2 }) => {
         }}>
           <Image
             style={styles.subimage}
-            source={require("../../assets/questions/question2/p8.png")}
+            source={require("../../assets/questions/question9/2.png")}
 
           />
         </TouchableOpacity>
@@ -90,7 +90,7 @@ export const Pregunta2 = ({ modalPregunta2, setModalPregunta2 }) => {
         }}>
           <Image
             style={styles.subimage}
-            source={require("../../assets/questions/question2/p3.png")}
+            source={require("../../assets/questions/question9/3.png")}
 
           />
         </TouchableOpacity>
@@ -104,7 +104,7 @@ export const Pregunta2 = ({ modalPregunta2, setModalPregunta2 }) => {
         }}>
           <Image
             style={styles.subimagef2}
-            source={require("../../assets/questions/question2/p4.png")}
+            source={require("../../assets/questions/question9/4.png")}
 
           />
         </TouchableOpacity>
@@ -116,7 +116,7 @@ export const Pregunta2 = ({ modalPregunta2, setModalPregunta2 }) => {
         }}>
           <Image
             style={styles.subimagef2}
-            source={require("../../assets/questions/question2/p5.png")}
+            source={require("../../assets/questions/question9/5.png")}
 
 
           />
@@ -129,7 +129,7 @@ export const Pregunta2 = ({ modalPregunta2, setModalPregunta2 }) => {
         }}>
           <Image
             style={styles.subimagef2}
-            source={require("../../assets/questions/question2/p6.png")}
+            source={require("../../assets/questions/question9/6.png")}
           />
         </TouchableOpacity>
       </View>
@@ -138,13 +138,26 @@ export const Pregunta2 = ({ modalPregunta2, setModalPregunta2 }) => {
         <Pressable
           style={[styles.btn, styles.btnAgregar]}
           onPress={() => {
-            handleOption(selectedOption)
+            setModalInteligencia(true);
+
           }}>
-          <Pregunta3
-            modalPregunta3={modalPregunta3}
-            setModalPregunta3={setModalPregunta3}></Pregunta3>
+          <TiposInteligencia
+            modalInteligencia={modalInteligencia}
+            setModalInteligencia={setModalInteligencia}></TiposInteligencia>
 
           <Text style={styles.subtitle}>Continuar</Text>
+        </Pressable>
+        <Pressable
+          style={[styles.btn, styles.btnAgregar]}
+          onPress={() => {
+            setModalInteligencia(true);
+
+          }}>
+          <Resultado
+            modalResultado={modalResultado}
+            setModalResultado={setModalResultado}></Resultado>
+
+          <Text style={styles.subtitle}>Terminar</Text>
         </Pressable>
       </View>
     </Modal>

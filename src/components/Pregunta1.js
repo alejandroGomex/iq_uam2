@@ -18,7 +18,7 @@ import {
   import React, { useState, useEffect } from "react";
   import Timer from "../Tools/Timer";
   
-  export const Pregunta = ({ modalPregunta, setModalPregunta }) => {
+  export const Pregunta = ({ modalPregunta1, setModalPregunta }) => {
     const [modalPregunta2, setModalPregunta2] = useState(false);
     const [selectedOption, setSelectedOption] = useState(null);
     const [value, setValue] = useState(0);
@@ -43,7 +43,7 @@ import {
       console.log(`Valor opcion seleccionada: ${value}`);
     };
     return (
-      <Modal animationType='slide' visible={modalPregunta}>
+      <Modal animationType='slide' visible={modalPregunta1}>
         <View>
           <ColorBar></ColorBar>
         </View>

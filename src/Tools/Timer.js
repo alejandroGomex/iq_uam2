@@ -3,7 +3,7 @@ import { View, Text,Alert,StyleSheet } from 'react-native';
 import {Resultado} from '../components/Resultado';
 const Timer = () => {
   const [modalResultado, setModalResultado] = useState(false);  
-  const totalSeconds = 15; // Cambia este valor según tus necesidades
+  const totalSeconds = 300; // Cambia este valor según tus necesidades
   const [seconds, setSeconds] = useState(totalSeconds);
 
   useEffect(() => {
